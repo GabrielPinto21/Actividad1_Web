@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0A0A0A;
+    color: #E0E0E0;
+}
+
+header {
+    background: linear-gradient(90deg, #1E1E1E, #292929);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 15px rgba(0, 255, 170, 0.2);
+    border-bottom: 3px solid #00FFAA;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.add-student {
+    background: #00FFAA;
+    color: #0A0A0A;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0, 255, 170, 0.4);
+}
+
+.add-student:hover {
+    background: #00D494;
+    transform: scale(1.05);
+}
+
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #00FFAA;
+}
+
+.students-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.student-card {
+    background: #1A1A1A;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 255, 170, 0.4);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.student-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(0, 255, 170, 0.7);
+}
+
+.student-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid #00FFAA;
+}
+
+.info {
+    padding: 15px;
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: #ffffff;
+}
+
+.id {
+    color: #00FFAA;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.email {
+    font-size: 0.9rem;
+    color: #B0B0B0;
+    margin: 5px 0 15px;
+}
+
+.github {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #00FFAA;
+    color: #0A0A0A;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 4px 15px rgba(0, 255, 170, 0.4);
+}
+
+.github img {
+    width: 20px;
+    height: 20px;
+}
+
+.github:hover {
+    background: #00D494;
+    box-shadow: 0 0 20px rgba(0, 255, 170, 0.9);
+    transform: scale(1.08);
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .add-student {
+        margin-top: 10px;
+    }
+}
