@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="sformu.css" />
+    <link rel="stylesheet" type="text/css" href="../css/sformu.css" />
     <title>formulario</title>
 </head>
 <body>
 
 <div class="modal">
     <div class="modal-content">
-        <span class="close">&times;</span>
+        <a href="../index.html" class="close">&times;</a>
         <h2>Add New Student</h2>
 
         <form id="studentForm">
             <div class="form-group">
-                <label for="studentID">Student Code (ID) *</label>
+                <label for="studentID">Código Estudiante (ID) *</label>
                 <input type="text" id="studentID" placeholder="e.g., S001" required>
             </div>
 
             <div class="form-group">
-                <label for="fullName">Full Name *</label>
+                <label for="fullName">Nombre Completo *</label>
                 <input type="text" id="fullName" placeholder="John Doe" required>
             </div>
 
             <div class="form-group">
-                <label for="email">Email</label>
+                <label for="email">Correo</label>
                 <input type="email" id="email" placeholder="john.doe@example.com">
             </div>
 
@@ -35,21 +35,25 @@
             </div>
 
             <div class="form-group">
-                <label for="photo">Photo URL</label>
+                <label for="photo">Foto URL</label>
                 <input type="url" id="photo" placeholder="https://example.com/photo.jpg">
             </div>
 
             <div class="form-group">
-                <label for="description">Description</label>
-                <textarea id="description" placeholder="Brief description about the student..."></textarea>
+                <label for="description">Descripción</label>
+                <textarea id="description" placeholder="Breve descripción sobre el estudiante...
+                "></textarea>
             </div>
 
             <div class="form-buttons">
-                <button type="button" class="cancel">Cancel</button>
-                <button type="submit" class="save">Save Student</button>
+                <a href = "../index.html" type="button" class="cancel">Cancelar</a>
+                <button id="guardar" name="guardar" class="save">Guardar Estudiante</button>
             </div>
         </form>
     </div>
 </div>
+<script src="../Js/app.js"></script>
+<script src="../Js/api.js"></script>
+
 </body>
 </html>

@@ -1,68 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <title>Listado de Estudiantes</title>
-  </head>
-  <body>
-    <header>
-      <h1>Student Management System</h1>
-      <button class="add-student">Add New Student</button>
-    </header>
 
-    <main>
-      <h2>Students List</h2>
-      <div class="students-grid">
-        <div class="student-card">
-          <img src="tony.jpg" alt="Tony Stark" />
-          <div class="info">
-            <h3>Tony Stark</h3>
-            <p class="id">05372</p>
-            <p class="email">tonystark@marvel.co</p>
-            <button class="github">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                alt="GitHub Logo"
-              />
-              GitHub
-            </button>
-          </div>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+  <title>Listado de Estudiantes</title>
+</head>
 
-        <div class="student-card">
-          <img src="tony.jpg" alt="Tony Stark" />
-          <div class="info">
-            <h3>Tony Stark</h3>
-            <p class="id">00001</p>
-            <p class="email">tonystark@marvel.co</p>
-            <button class="github">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                alt="GitHub Logo"
-              />
-              GitHub
-            </button>
-          </div>
-        </div>
+<body>
+  <header>
+    <h1>Student Management System</h1>
+    <a href = "html/formulario.html" class="add-student">Agregar Estudiante</a>
+  </header>
 
-        <div class="student-card">
-          <img src="tony.jpg" alt="Tony Stark" />
-          <div class="info">
-            <h3>Tony Stark</h3>
-            <p class="id">05096</p>
-            <p class="email">tonystark@marvel.co</p>
-            <button class="github">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                alt="GitHub Logo"
-              />
-              GitHub
-            </button>
-          </div>
-        </div>
+  <main>
+    <h2>Students List</h2>
+    <div class="students-grid" id="studentsList">
+    </div>
+  </main>
+
+  <template id="studentCardTemplate">
+    <div class="student-card">
+      <img class="student-image" src="" alt="Tony Stark2" />
+      <div class="info">
+        <h3 class="student-name">Tony Stark</h3>
+        <p class="id student-id">05372</p>
+        <p class="email student-email">tonystark@marvel.co</p>
+        <button class="github">
+          <a class="github-link">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Logo" />
+            GitHub
+          </a>
+
+        </button>
       </div>
-    </main>
-  </body>
+  </template>
+
+  <script src="Js/api.js"></script>
+  <script src="Js/app.js"></script>
+</body>
+
 </html>
