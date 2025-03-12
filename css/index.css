@@ -1,3 +1,4 @@
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +11,7 @@ body {
     color: #E0E0E0;
 }
 
+/* HEADER */
 header {
     background: linear-gradient(90deg, #1E1E1E, #292929);
     color: white;
@@ -37,6 +39,7 @@ header h1 {
     font-size: 16px;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 4px 15px rgba(0, 255, 170, 0.4);
+    text-decoration: none;
 }
 
 .add-student:hover {
@@ -44,6 +47,7 @@ header h1 {
     transform: scale(1.05);
 }
 
+/* CONTENEDOR PRINCIPAL */
 main {
     max-width: 1100px;
     margin: 40px auto;
@@ -57,12 +61,14 @@ h2 {
     color: #00FFAA;
 }
 
+/* GRID DE ESTUDIANTES */
 .students-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
 }
 
+/* TARJETA DE ESTUDIANTE */
 .student-card {
     background: #1A1A1A;
     border-radius: 12px;
@@ -106,49 +112,46 @@ h3 {
     margin: 5px 0 15px;
 }
 
-.github {
-    display: inline-flex;
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+
+.github,
+.actualizar {
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
     background: #00FFAA;
     color: #0A0A0A;
     border: none;
     padding: 10px;
     border-radius: 8px;
     cursor: pointer;
-    font-weight: bold;
-    font-size: 14px;
     transition: all 0.3s ease-in-out;
-    text-decoration: none;
-    white-space: nowrap;
     box-shadow: 0 4px 15px rgba(0, 255, 170, 0.4);
-   
+    width: 40px;
+    height: 40px;
 }
 
-.github img {
+.github img,
+.actualizar img {
     width: 20px;
     height: 20px;
 }
 
-.github:hover {
+.github:hover,
+.actualizar:hover {
     background: #00D494;
     box-shadow: 0 0 20px rgba(0, 255, 170, 0.9);
     transform: scale(1.08);
 }
-.github-link{
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    padding-top: 10%;
-}
 
-
-.github-link:hover{
-    text-decoration: none;
-}
-
+/* RESPONSIVE */
 @media (max-width: 768px) {
     header {
         flex-direction: column;

@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="./css/index.css" />
   <title>Listado de Estudiantes</title>
 </head>
 
 <body>
   <header>
     <h1>Student Management System</h1>
-    <a href = "html/formulario.html" class="add-student">Agregar Estudiante</a>
+    <a href="html/formulario.html" class="add-student">Agregar Estudiante</a>
   </header>
 
   <main>
@@ -24,21 +24,28 @@
     <div class="student-card">
       <img class="student-image" src="" alt="Tony Stark2" />
       <div class="info">
-        <h3 class="student-name">Tony Stark</h3>
-        <p class="id student-id">05372</p>
-        <p class="email student-email">tonystark@marvel.co</p>
+        <h3 class="student-name"></h3>
+        <p class="id student-id"></p>
+        <p class="email student-email"></p>
+        
         <button class="github">
           <a class="github-link">
             <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Logo" />
-            GitHub
           </a>
-
         </button>
+    
+        <button class="actualizar">
+          <a href="html/editar.html" class="actualizar-link">
+            <img src="imagenes/editar.png" alt="actualizar Logo" />
+          </a>
+        </button>
+
+
       </div>
   </template>
 
-  <script src="Js/api.js"></script>
-  <script src="Js/app.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>

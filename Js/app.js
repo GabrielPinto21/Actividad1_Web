@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    // Sample student data
-
+    
     const studentsList = document.getElementById('studentsList');
     const template = document.getElementById('studentCardTemplate');
 
@@ -26,9 +25,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         });
     }
-    // Initial render
     await renderStudents();
-
 });
 
 document.getElementById("guardar").addEventListener('click', async (event) => {
@@ -53,15 +50,42 @@ document.getElementById("guardar").addEventListener('click', async (event) => {
 
     console.log(usuario);
 
-   try {
-    await api.createStudent(usuario);
-    alert('Usuario creado existosamente');
-    window.location.href = '../index.html';
-   } catch (error) {
-    alert('Falló la creación del Usuario')
-   }
-    
+    try {
+        await api.createStudent(usuario);
+        alert('Usuario creado existosamente');
+        window.location.href = '../index.html';
+    } catch (error) {
+        alert('Falló la creación del Usuario')
+    }
+});
 
+document.getElementById("actualizar").addEventListener('click', async (event) => {
 
+    event.preventDefault();
 
+    const code = document.getElementById('studentID').value;
+    const name = document.getElementById('fullName').value;
+    const email = document.getElementById('email').value;
+    const github_link = document.getElementById('github').value;
+    const photo = document.getElementById('photo').value;
+    const description = document.getElementById('description').value;
+
+    const usuario = {
+        code,
+        name,
+        email,
+        github_link,
+        photo,
+        description
+    };
+
+    console.log(usuario);
+
+    try {
+        await api.updateStudent(usuario);
+        alert('Usuario actualizado existosamente');
+        window.location.href = '../index.html';
+    } catch (error) {
+        alert('Falló la actualización de datos')
+    }
 });
