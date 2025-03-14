@@ -15,4 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('studentToEdit', JSON.stringify(student));
         window.location.href = 'editar.html';
     });
+
+    document.getElementById('back').addEventListener('click', () => {
+        localStorage.setItem('studentToEdit', JSON.stringify(student));
+        window.location.href = '../index.html';
+    });    
 });
