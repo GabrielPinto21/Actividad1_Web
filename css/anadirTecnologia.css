@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.modal-content {
+    background-color: #1A1A1A;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 170, 0.5);
+    width: 400px;
+    max-width: 100%;
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+}
+
+.close:hover {
+    color: #000;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group select,
+.form-group input[type="radio"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #00FFAA;
+    background: #222;
+    color: white;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.skill-level {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill-level label {
+    margin: 0 5px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.form-buttons .cancel,
+.form-buttons .save {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-buttons .cancel {
+    background: #444;
+    color: white;
+}
+
+.form-buttons .cancel:hover {
+    background: #666;
+}
+
+.form-buttons .save {
+    background: #00FFAA;
+    color: black;
+}
+
+.form-buttons .save:hover {
+    background: #00CC88;
+}
+
+.tech-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #444;
+}
+
+.tech-name {
+    flex: 1;
+    text-align: left;
+}
+
+.tech-level {
+    display: flex;
+    align-items: center;
+}
+
+.star {
+    color: #FFD700;
+    font-size: 20px;
+    margin: 0 2px;
+}
+
+.edit-tech, .delete-tech {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.edit-tech:hover, .delete-tech:hover {
+    color: #00FFAA;
+}
+
+
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 80%;
+    }
+}

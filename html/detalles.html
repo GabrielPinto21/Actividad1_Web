@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/detalles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <title>Document</title>
 </head>
 
@@ -23,19 +24,58 @@
         <div class="card technologies">
             <div class="tech-header">
                 <h2>Technologies</h2>
-                <button class="add-tech">+ Add Technology</button>
+                <button id="addTecnology" class="add-tech">+ Add Technology</button>
             </div>
-            <div class="tech-content">
+            <div class="tech-content" id="tech-content">
                 <p class="no-tech">No technologies added yet</p>
                 <p>Add technologies to showcase this student's skills</p>
-                <button class="add-first-tech">+ Add First Technology</button>
             </div>
         </div>
     </div>
+    <!-- tech-content >>>> tech-template -->
+    <template id="tech-template">
+        <div class="TechnologyCard">
+            <!-- colum1 -->
+            <div id="tech-card-info" class="tech-card-info" >
+                <!-- colum1.1 Logo -->
+                <div class="tech-card-logo">
+                    <img src="https://i.pinimg.com/736x/79/5e/bb/795ebb5f4a470cd7242136237f61fc53.jpg" alt="java" id="tech-img">
+                </div>
+                <!-- colum1.2 -->
+                <div id="tech-card-details" class="tech-card-details">
+                    <!-- fila 1.2.1 Nombre -->
+                    <div>
+                        <h3 id="tech-name">Java</h3>
+                    </div>
+                    <!-- fila 1.2.2 Calificacion -->
+                    <div id="tech-rating">
+                        <span><i class="ri-star-s-line"></i></span>
+                        <span><i class="ri-star-s-fill"></i></span>
+                        <span><i class="ri-star-s-fill"></i></span>
+                        <span><i class="ri-star-s-fill"></i></span>
+                        <span><i class="ri-star-s-fill"></i></span>
+                    </div>
+                </div>
+            </div>
+            <!-- colum2 Botones -->
+            <div class="tech-card-button">
+                <button class="edit" id="tech-card-edit">
+                    <i class="ri-pencil-line"></i>
+                </button>
+                <!-- before edit in class -->
+                <button class="edit" id="tech-card-delete">
+                    <i class="ri-delete-bin-6-line"></i>
+                </button>
+            </div>
 
-    <script src="../Js/api.js"></script>
-    <script src="../Js/app.js"></script>
-    <script src="../Js/detalles.js"></script>
+        </div>
+    </template>
+</body>
+
+<script src="../js/api.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/detalles.js"></script>
+
 </body>
 
 </html>

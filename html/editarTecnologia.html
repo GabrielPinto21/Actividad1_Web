@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/anadirTecnologia.css" />
+    <title>Edit Technology</title>
+</head>
+<body>
+    <div class="modal">
+        <div class="modal-content">
+            <a href="detalles.html" class="close">&times;</a>
+            <h2>Edit Technology</h2>
+            <form id="editTechForm">
+                <div class="form-group">
+                    <label for="techSelect">Technology</label>
+                    <select id="techSelect" class="tech-select" disabled>
+                        <option value="">Select a technology</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="techLevel">Skill Level (1-5)</label>
+                    <div id="techLevel" class="skill-level">
+                        <input type="radio" id="level1" name="level" value="1">
+                        <label for="level1">1</label>
+                        <input type="radio" id="level2" name="level" value="2">
+                        <label for="level2">2</label>
+                        <input type="radio" id="level3" name="level" value="3">
+                        <label for="level3">3</label>
+                        <input type="radio" id="level4" name="level" value="4">
+                        <label for="level4">4</label>
+                        <input type="radio" id="level5" name="level" value="5">
+                        <label for="level5">5</label>
+                    </div>
+                </div>
+                <div class="form-buttons">
+                    <button type="button" class="cancel" onclick="window.location.href='detalles.html'">Cancel</button>
+                    <button type="submit" class="save">Update Technology</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../js/api.js"></script>
+    <script src="../js/editarTecnologia.js"></script>
+</body>
+</html>
