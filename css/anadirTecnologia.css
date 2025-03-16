@@ -125,7 +125,8 @@ h2 {
     margin: 0 2px;
 }
 
-.edit-tech, .delete-tech {
+.edit-tech,
+.delete-tech {
     background: none;
     border: none;
     color: white;
@@ -133,11 +134,10 @@ h2 {
     margin-left: 10px;
 }
 
-.edit-tech:hover, .delete-tech:hover {
+.edit-tech:hover,
+.delete-tech:hover {
     color: #00FFAA;
 }
-
-
 
 @media (max-width: 768px) {
     .modal-content {

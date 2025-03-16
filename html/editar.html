@@ -11,7 +11,7 @@
 <body>
     <div class="modal">
         <div class="modal-content">
-            <a href="../index.html" class="close">&times;</a>
+            <a href="#" class="close" id="closeButton">&times;</a>
             <h2>Actualizar Datos</h2>
 
             <form id="studentForm">
@@ -50,7 +50,18 @@
     </div>
     <script src="../js/api.js"></script>
     <script src="../js/edit.js"></script>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const studentCode = urlParams.get('student_code');
+            const referrer = document.referrer;
+            if (referrer.includes('detalles.html')) {
+                document.getElementById('closeButton').href = `detalles.html?student_code=${studentCode}`;
+            } else {
+                document.getElementById('closeButton').href = `../index.html`;
+            }
+        });
+    </script>
 </body>
 
 </html>

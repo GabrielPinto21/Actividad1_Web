@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,6 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <title>Document</title>
 </head>
-
 <body>
     <a id="back" href="#" class="back-button">&larr; Back</a>
     <div class="container">
@@ -20,7 +18,6 @@
             <p id="description" class="Student-description"></p>
             <button class="edit" id="edit">&#9998; Edit Profile</button>
         </div>
-
         <div class="card technologies">
             <div class="tech-header">
                 <h2>Technologies</h2>
@@ -32,22 +29,16 @@
             </div>
         </div>
     </div>
-    <!-- tech-content >>>> tech-template -->
     <template id="tech-template">
         <div class="TechnologyCard">
-            <!-- colum1 -->
-            <div id="tech-card-info" class="tech-card-info" >
-                <!-- colum1.1 Logo -->
+            <div id="tech-card-info" class="tech-card-info">
                 <div class="tech-card-logo">
                     <img src="https://i.pinimg.com/736x/79/5e/bb/795ebb5f4a470cd7242136237f61fc53.jpg" alt="java" id="tech-img">
                 </div>
-                <!-- colum1.2 -->
                 <div id="tech-card-details" class="tech-card-details">
-                    <!-- fila 1.2.1 Nombre -->
                     <div>
                         <h3 id="tech-name">Java</h3>
                     </div>
-                    <!-- fila 1.2.2 Calificacion -->
                     <div id="tech-rating">
                         <span><i class="ri-star-s-line"></i></span>
                         <span><i class="ri-star-s-fill"></i></span>
@@ -57,25 +48,18 @@
                     </div>
                 </div>
             </div>
-            <!-- colum2 Botones -->
             <div class="tech-card-button">
-                <button class="edit" id="tech-card-edit">
+                <button class="edit" id="tech-card-edit" title="Edit Technology">
                     <i class="ri-pencil-line"></i>
                 </button>
-                <!-- before edit in class -->
-                <button class="edit" id="tech-card-delete">
+                <button class="edit" id="tech-card-delete" title="Delete Technology">
                     <i class="ri-delete-bin-6-line"></i>
                 </button>
             </div>
-
         </div>
     </template>
+    <script src="../js/api.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/detalles.js"></script>
 </body>
-
-<script src="../js/api.js"></script>
-<script src="../js/app.js"></script>
-<script src="../js/detalles.js"></script>
-
-</body>
-
 </html>

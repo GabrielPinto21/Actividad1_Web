@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/anadirTecnologia.css" />
     <title>Edit Technology</title>
 </head>
+
 <body>
     <div class="modal">
         <div class="modal-content">
-            <a href="detalles.html" class="close">&times;</a>
+            <a href="#" class="close" id="closeButton">&times;</a>
             <h2>Edit Technology</h2>
             <form id="editTechForm">
-                <div class="form-group">
-                    <label for="techSelect">Technology</label>
-                    <select id="techSelect" class="tech-select" disabled>
-                        <option value="">Select a technology</option>
-                    </select>
-                </div>
                 <div class="form-group">
                     <label for="techLevel">Skill Level (1-5)</label>
                     <div id="techLevel" class="skill-level">
@@ -41,6 +37,14 @@
         </div>
     </div>
     <script src="../js/api.js"></script>
-    <script src="../js/editarTecnologia.js"></script>
+    <script src="../js/editTech.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const studentCode = urlParams.get('student_code');
+            document.getElementById('closeButton').href = `detalles.html?student_code=${studentCode}`;
+        });
+    </script>
 </body>
+
 </html>

@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/anadirTecnologia.css" />
     <title>Add Technology</title>
 </head>
+
 <body>
     <div class="modal">
         <div class="modal-content">
-            <a href="detalles.html" class="close">&times;</a>
+            <a href="#" class="close" id="closeButton">&times;</a>
             <h2>Add Technology</h2>
             <form id="addTechForm">
                 <div class="form-group">
@@ -42,5 +44,13 @@
     </div>
     <script src="../js/api.js"></script>
     <script src="../js/techcnologys.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const studentCode = urlParams.get('student_code');
+            document.getElementById('closeButton').href = `detalles.html?student_code=${studentCode}`;
+        });
+    </script>
 </body>
+
 </html>
