@@ -42,7 +42,7 @@
                 </div>
 
                 <div class="form-buttons">
-                    <a href="../index.html" type="button" class="cancel">Cancelar</a>
+                    <a href="#" id="cancelButton" type="button" class="cancel">Cancelar</a>
                     <button id="actualizar" name="guardar" class="save">Actualizar</button>
                 </div>
             </form>
@@ -55,10 +55,14 @@
             const urlParams = new URLSearchParams(window.location.search);
             const studentCode = urlParams.get('student_code');
             const referrer = document.referrer;
+            const cancelButton = document.getElementById('cancelButton');
+            const closeButton = document.getElementById('closeButton');
             if (referrer.includes('detalles.html')) {
-                document.getElementById('closeButton').href = `detalles.html?student_code=${studentCode}`;
+                cancelButton.href = `detalles.html?student_code=${studentCode}`;
+                closeButton.href = `detalles.html?student_code=${studentCode}`;
             } else {
-                document.getElementById('closeButton').href = `../index.html`;
+                cancelButton.href = `../index.html`;
+                closeButton.href = `../index.html`;
             }
         });
     </script>
