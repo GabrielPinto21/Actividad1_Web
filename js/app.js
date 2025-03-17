@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             clone.querySelector('.student-id').textContent = `ID: ${student.code}`;
             clone.querySelector('.student-email').textContent = student.email;
             clone.querySelector('.student-image').src = student.photo;
+            if(student.photo == null || student.photo == "") {
+                clone.querySelector('.student-image').src = "https://cdn2.iconfinder.com/data/icons/delivery-and-logistic/64/Not_found_the_recipient-no_found-person-user-search-searching-4-1024.png";
+            }
             clone.querySelector('.student-image').alt = student.name;
 
             clone.querySelector('#github-link').onclick = () => {
