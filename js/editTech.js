@@ -1,10 +1,11 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const studentCode = urlParams.get('student_code');
     const technologyCode = urlParams.get('technology_code');
 
     async function loadStudentTech() {
-        const studentTech = await api.getStudentTechnology(studentCode, technologyCode);
+        const studentTechs = await api.getStudentTechnologies(studentCode);
+        const studentTech = studentTechs.find(st => st.technology_code == technologyCode);
         if (studentTech) {
             document.querySelector('h2').textContent = `Editar ${studentTech.technology.name}`;
             const levelRadios = document.querySelectorAll('input[name="level"]');
@@ -15,8 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }
-
-    loadStudentTech();
 
     document.getElementById('editTechForm').addEventListener('submit', async (event) => {
         event.preventDefault();
@@ -35,4 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.cancel').addEventListener('click', () => {
         window.location.href = `detalles.html?student_code=${studentCode}`;
     });
+    await loadStudentTech();
 });
+
